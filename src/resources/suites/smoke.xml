@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suite">
+    <test name="Smoke Tests">
+        <classes>
+            <class name="tests.LogoExistTest"/>
+            <class name="tests.ValidUserLogInTest"/>
+            <class name="tests.InvalidUserLogInTest"/>
+            <class name="tests.LanguageChangingTest"/>
+            <class name="tests.CreateInvalidAccountTest"/>
+            <class name="tests.NavigateBetweenPagesTest"/>
+            <class name="tests.CountryPhoneCodeChangingTest"/>
+            <class name="tests.LoginPageMaskTest"/>
+            <class name="tests.CreateAccountPageMaskTest"/>
+            <class name="tests.RemindPasswordPageMaskTest"/>
+        </classes>
+    </test>
+</suite>
