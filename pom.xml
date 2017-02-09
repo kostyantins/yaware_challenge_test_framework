@@ -26,11 +26,6 @@
 
     </properties>
 
-    <repository>
-        <id>jetbrains-all</id>
-        <url>http://download.jetbrains.com/teamcity-repository</url>
-    </repository>
-
     <dependencies>
 
         <dependency>
@@ -97,27 +92,6 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j-simple.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jetbrains.teamcity</groupId>
-            <artifactId>server-api</artifactId>
-            <version>10.0</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jetbrains.teamcity</groupId>
-            <artifactId>agent-api</artifactId>
-            <version>10.0</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jetbrains.teamcity</groupId>
-            <artifactId>tests-support</artifactId>
-            <version>10.0</version>
-            <scope>test</scope>
         </dependency>
 
     </dependencies>
