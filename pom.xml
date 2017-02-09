@@ -22,8 +22,14 @@
         <allure-testng-adaptor>1.5.0.RC2</allure-testng-adaptor>
         <aspectjweaver>1.8.9</aspectjweaver>
         <htmlelements-java.version>1.17</htmlelements-java.version>
+        <slf4j-simple.version>1.7.22</slf4j-simple.version>
 
     </properties>
+
+    <repository>
+        <id>jetbrains-all</id>
+        <url>http://download.jetbrains.com/teamcity-repository</url>
+    </repository>
 
     <dependencies>
 
@@ -90,7 +96,28 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.22</version>
+            <version>${slf4j-simple.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains.teamcity</groupId>
+            <artifactId>server-api</artifactId>
+            <version>10.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains.teamcity</groupId>
+            <artifactId>agent-api</artifactId>
+            <version>10.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains.teamcity</groupId>
+            <artifactId>tests-support</artifactId>
+            <version>10.0</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

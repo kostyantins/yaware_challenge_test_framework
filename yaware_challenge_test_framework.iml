@@ -67,5 +67,8 @@
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.4" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.22" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.22" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jetbrains.teamcity:server-api:10.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jetbrains.teamcity:agent-api:10.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.teamcity:tests-support:10.0" level="project" />
   </component>
 </module>
