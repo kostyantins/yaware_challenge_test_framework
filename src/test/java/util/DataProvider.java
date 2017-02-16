@@ -1,12 +1,18 @@
 package util;
 
+import java.io.IOException;
+
 import static enums.Languages.*;
 import static enums.PageToGo.CREATE_ACCOUNT_PAGE;
 import static enums.PageToGo.REMIND_PASS_PAGE;
 import static enums.PageToGoConfirmElements.CREATE_BUTTON;
 import static enums.PageToGoConfirmElements.REMIND_PASS_BUTTON;
+import static util.ExcelReader.getExcelData;
+import static util.PropertiesReader.getProperty;
 
 public class DataProvider {
+
+    private final static String EXCEL_FILE = getProperty("excel.date");
 
     private DataProvider() {
     }
@@ -24,7 +30,6 @@ public class DataProvider {
                 {"qwetryfufjcnbdhg", "qyetrgdbxvdferstahxneuyd"},
                 {"132445566778890", "122324354556576879"}
         };
-
     }
 
     @org.testng.annotations.DataProvider
@@ -43,5 +48,10 @@ public class DataProvider {
                 {CREATE_ACCOUNT_PAGE, CREATE_BUTTON},
                 {REMIND_PASS_PAGE, REMIND_PASS_BUTTON}
         };
+    }
+
+    @org.testng.annotations.DataProvider
+    public static Object[][] loginData() throws IOException {
+        return getExcelData(EXCEL_FILE, "sheet1");
     }
 }

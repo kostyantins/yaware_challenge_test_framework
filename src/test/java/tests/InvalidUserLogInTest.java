@@ -10,7 +10,7 @@ import static pageobjects.LogInPage.invalidUser;
 
 public class InvalidUserLogInTest extends TestRunner {
 
-    @Test(dataProvider = "testInvalidDataLogIn", dataProviderClass = DataProvider.class)
+    @Test(dataProvider = "loginData", dataProviderClass = DataProvider.class)
     public final void testInvalidUserLogIn(final String invalidEmail, final String InvalidPass) {
 
         logInPage
