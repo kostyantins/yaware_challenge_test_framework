@@ -50,6 +50,8 @@ public class TestRunner {
         if (getDriver() != null) {
             try {
                 getDriver()
+                        .close();
+                getDriver()
                         .quit();
             } catch (WebDriverException e) {
                 System.out.println("***** CAUGHT EXCEPTION IN DRIVER TEARDOWN *****" + e);
