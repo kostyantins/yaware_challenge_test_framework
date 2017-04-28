@@ -86,6 +86,11 @@ public class LogInPage extends AbstractPageObject {
     @Timeout(30)
     private Link haveAnIdeaLink;
 
+    @Name("Remember me checkbox")
+    @FindBy(xpath = "//*[@id='form-field-rememberMe']/label")
+    @Timeout(30)
+    private WebElement rememberMeCheckbox;
+
     private String validEmail = PropertiesReader.getProperty("valid.email");
     private String validPass = PropertiesReader.getProperty("valid.pass");
 
@@ -241,6 +246,14 @@ public class LogInPage extends AbstractPageObject {
     public LogInPage setEnglishLanguage() {
 
         clickTo(englishLanguage);
+
+        return this;
+    }
+
+    @Step
+    public LogInPage setRememberMeCheckbox() {
+
+        clickTo(rememberMeCheckbox);
 
         return this;
     }

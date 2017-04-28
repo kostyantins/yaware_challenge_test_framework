@@ -151,4 +151,19 @@ public class WebElementAsserts {
         }
         return this;
     }
+
+    @Step
+    public final WebElementAsserts isHaveCookieAs(final String title) {
+
+        isNotNull();
+
+        if (!actual
+                .getAttribute("placeholder")
+                .equalsIgnoreCase(title)) {
+
+            Assert.fail("Element's {" + actual + "} attribute {" + actual.getAttribute("placeholder") +
+                    "} should be equal {" + title + "} !");
+        }
+        return this;
+    }
 }
