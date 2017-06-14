@@ -5,12 +5,15 @@ import enums.PageToGo;
 import enums.PageToGoConfirmElements;
 import lombok.Getter;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.allure.annotations.Step;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.annotations.Timeout;
 import ru.yandex.qatools.htmlelements.element.*;
 import util.PropertiesReader;
+
+import java.util.List;
 
 @Getter
 public class LogInPage extends AbstractPageObject {
@@ -31,6 +34,13 @@ public class LogInPage extends AbstractPageObject {
     @FindBy(id = "password")
     @Timeout(30)
     public static TextInput passInput;
+
+    @Name("Log in credentials")
+    @FindAll({
+            @FindBy(id = "email"),
+            @FindBy(id = "password")
+    })
+    private List<WebElement> allElementsInList;
 
     //element to check right navigation to LogInPage
     @Name("Login button")
@@ -93,7 +103,6 @@ public class LogInPage extends AbstractPageObject {
 
     private String validEmail = PropertiesReader.getProperty("valid.email");
     private String validPass = PropertiesReader.getProperty("valid.pass");
-
 
     @Step
     public final CreateAccountPage openCreateAccountPage() {

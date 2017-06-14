@@ -8,6 +8,7 @@ import ru.yandex.qatools.allure.annotations.Step;
 import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementDecorator;
 import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementLocatorFactory;
 
+import static com.codeborne.selenide.Selenide.$;
 import static util.Wait.getClickableElement;
 import static util.WebDriverFactory.getDriver;
 

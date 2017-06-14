@@ -1,5 +1,6 @@
 package util;
 
+import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebDriverException;
 import org.testng.annotations.*;
 import pageobjects.CreateAccountPage;
@@ -31,6 +32,8 @@ public class TestRunner {
         final String homePageUrl = PropertiesReader.getProperty("home.page.url");
 
         setDriver(browser, version, platform);
+
+        WebDriverRunner.setWebDriver(getDriver());
 
         getDriver()
                 .manage()
